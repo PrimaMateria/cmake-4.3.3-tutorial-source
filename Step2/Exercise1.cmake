@@ -18,8 +18,8 @@ endmacro()
 
 # TODO2: Call MacroAppend, then return the value from FuncAppend
 function(FuncAppend ListVar Value)
-  MacroAppend("${ListVar}" "${Value}")
-  set("${ListVar}" "${${ListVar}}" PARENT_SCOPE)
+  MacroAppend(${ListVar} ${Value})
+  set(${ListVar} "${${ListVar}}" PARENT_SCOPE)
 endfunction()
 
 
