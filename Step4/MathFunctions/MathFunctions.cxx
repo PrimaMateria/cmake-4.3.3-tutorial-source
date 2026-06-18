@@ -1,12 +1,12 @@
 // TODO5: Include <cmath>
+#include <cmath>
 
 #include <format>
 #include <iostream>
 
 namespace {
 // a hack square root calculation using simple operations
-double mysqrt(double x)
-{
+double mysqrt(double x) {
   if (x <= 0) {
     return 0;
   }
@@ -25,14 +25,16 @@ double mysqrt(double x)
   }
   return result;
 }
-}
+} // namespace
 
 namespace mathfunctions {
-double sqrt(double x)
-{
+double sqrt(double x) {
   // TODO6: Check if TUTORIAL_USE_STD_SQRT is defined, if so use std::sqrt
   //        instead of mysqrt
+  if (TUTORIAL_USE_STD_SQRT) {
+    return std::sqrt(x);
+  }
 
   return mysqrt(x);
 }
-}
+} // namespace mathfunctions
