@@ -31,10 +31,10 @@ namespace mathfunctions {
 double sqrt(double x) {
   // TODO6: Check if TUTORIAL_USE_STD_SQRT is defined, if so use std::sqrt
   //        instead of mysqrt
-  if (TUTORIAL_USE_STD_SQRT) {
-    return std::sqrt(x);
-  }
-
+#ifdef TUTORIAL_USE_STD_SQRT
+  return std::sqrt(x);
+#else
   return mysqrt(x);
+#endif
 }
 } // namespace mathfunctions
