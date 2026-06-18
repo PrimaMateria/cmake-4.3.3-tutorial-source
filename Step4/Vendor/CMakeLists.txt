@@ -8,4 +8,4 @@ target_include_directories(VendorLib INTERFACE include)
 target_link_directories(VendorLib INTERFACE lib)
 
 # TODO13: Add the Vendor archive to VendorLib
-target_link_libraries(VendorLib INTERFACE libVendor.a)
+target_link_libraries(VendorLib INTERFACE Vendor)

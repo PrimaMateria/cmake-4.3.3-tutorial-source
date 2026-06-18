@@ -8,12 +8,8 @@ target_sources(Tutorial
 # TODO14: Add VendorLib to Tutorial
 target_link_libraries(Tutorial
   PRIVATE
-    VendorLib
-)
-
-target_link_libraries(Tutorial
-  PRIVATE
     MathFunctions
+    VendorLib
 )
 
 # TODO4: Add a compile feature for C++20 support to Tutorial
