@@ -6,17 +6,14 @@
 #include <MathFunctions.h>
 
 #ifdef TUTORIAL_USE_VENDORLIB
-#  include <Vendor.h>
+#include <Vendor.h>
 #endif
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char *argv[]) {
   if (argc < 2) {
     std::cout << std::format("Usage: {} number\n", argv[0]);
     return 1;
   }
-
-  int unused;
 
   // convert input to double
   double const inputValue = std::stod(argv[1]);
